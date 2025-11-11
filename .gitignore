@@ -1,0 +1,60 @@
+# === Terraform ===
+# Local .terraform directories
+**/.terraform/*
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform plan files
+*.tfplan
+*.plan
+
+# Provider and plugin logs
+.terraform.lock.hcl
+.terraformrc
+terraform.rc
+
+# === Terragrunt ===
+.terragrunt-cache/
+terragrunt-debug.log
+
+# === IDEs & Editors ===
+# VS Code
+.vscode/
+# IntelliJ / JetBrains
+.idea/
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# === OS Files ===
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+# Linux
+*~
+
+# === Misc ===
+# Local environment variables or test files
+.env
+.envrc
+*.bak
+*.tmp
