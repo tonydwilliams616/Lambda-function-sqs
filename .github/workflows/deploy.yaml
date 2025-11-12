@@ -21,7 +21,7 @@ jobs:
     env:
       AWS_REGION: us-east-1
       TF_VERSION: 1.9.6
-      AWS_ROLE_ARN: arn:aws:iam::<ACCOUNT_ID>:role/GitHubActionsTerraformRole
+      AWS_ROLE_ARN: arn:aws:iam::304783065639:role/GitHubActionsTerraformRole
 
     steps:
       - name: Checkout Repository
@@ -57,3 +57,4 @@ jobs:
       # - name: Terraform Apply (auto)
       #   if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       #   run: terraform apply -auto-approve tfplan
+      # Lambda-function-sqs / tonydwilliams616
