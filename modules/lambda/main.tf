@@ -67,6 +67,9 @@ resource "aws_lambda_function" "this" {
       SNS_TOPIC_ARN = var.sns_topic_arn
     }
   }
+  dead_letter_config {
+    target_arn = aws_sqs_queue.dlq.arn
+  }
 }
 
 resource "aws_lambda_event_source_mapping" "sqs_trigger" {
@@ -74,4 +77,9 @@ resource "aws_lambda_event_source_mapping" "sqs_trigger" {
   function_name    = aws_lambda_function.this.arn
   batch_size       = 10
   enabled          = true
+}
+
+# Dead Letter Queue
+resource "aws_sqs_queue" "dlq" {
+  name = "${var.function_name}-dlq"
 }
