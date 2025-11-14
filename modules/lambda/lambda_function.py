@@ -13,6 +13,7 @@ sns_client = boto3.client("sns")
 # Environment variable for SNS Topic ARN
 SNS_TOPIC_ARN = os.environ.get("SNS_TOPIC_ARN")
 
+
 def lambda_handler(event, context):
     """
     Lambda triggered by SQS messages.
